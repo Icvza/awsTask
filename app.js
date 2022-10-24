@@ -31,6 +31,11 @@ const addTask = (body) => {
      tasks.push(obj)
      saveTasks(tasks)
 }
+const PORT = 5000
+
+app.listen(PORT, () => {
+	console.log("Server Running on PORT", PORT);
+})
 
 
 const updateTask = (task) => {
@@ -45,7 +50,6 @@ const updateTask = (task) => {
      saveTasks(updatedTasks)
 }
 
-const PORT = 5000
 
 
 app.get('/', (req, res)=> {
